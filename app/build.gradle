@@ -6,7 +6,7 @@ android {
     useLibrary 'org.apache.http.legacy'
 
     defaultConfig {
-        applicationId "com.zidiv.realty"
+        applicationId "com.zidiv.realtyimp"
         minSdkVersion 19
         //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 27
