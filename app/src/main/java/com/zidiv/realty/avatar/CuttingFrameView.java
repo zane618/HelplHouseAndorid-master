@@ -96,9 +96,10 @@ public class CuttingFrameView extends View {
     public Bitmap takeScreenShot(Activity activity) {
         View view = activity.getWindow().getDecorView();
         //去掉标题栏,actionbar 的高度
-        Bitmap b = Bitmap.createBitmap(ScreenUtils.snapShotWithStatusBar(activity), 0,
+        Bitmap screentBitmap = ScreenUtils.snapShotWithStatusBar(activity);
+        Bitmap b = Bitmap.createBitmap(screentBitmap, 0,
                 view.getHeight() - height, width,
-                height);
+                screentBitmap.getHeight() - (view.getHeight() - height));
 
         //偏移一个像素，避免截取白线
         b = Bitmap.createBitmap(b, width / 10 + 1, top + 1, eage - 2, eage - 2);

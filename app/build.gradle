@@ -7,11 +7,12 @@ android {
 
     defaultConfig {
         applicationId "com.zidiv.realty"
-        minSdkVersion 18
+        minSdkVersion 19
         //noinspection ExpiredTargetSdkVersion
-        targetSdkVersion 22
-        versionCode 20181228
-        versionName "4.0.1"
+        targetSdkVersion 27
+//        versionCode 20181228
+        versionCode 20191023
+        versionName "6.0.0"
 
         ndk {
             //选择要添加的对应 cpu 类型的 .so 库。

@@ -401,6 +401,9 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
                                         Intent intent = new Intent(context, MainFragmentActivity.class);
                                         intent.putExtra("index", 3);
                                         startActivity(intent);
+                                        if (getActivity() != null) {
+                                            getActivity().finish();
+                                        }
                                     }
                                 } catch (JSONException e) {
                                     L.e("解析上传头像返回数据失败" + e.toString());
