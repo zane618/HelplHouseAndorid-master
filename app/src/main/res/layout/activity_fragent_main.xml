@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background_all">
+
+    <FrameLayout
+        android:id="@+id/layout_fragme"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </FrameLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#bfbfbf"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:paddingTop="2dp"
+        android:background="@color/bottom_color">
+        <Button
+            android:id="@+id/btn_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/icon_home"
+            android:text="首页"
+            android:textSize="@dimen/sp12"
+            android:textColor="@color/bottom_text_colcor"
+            android:background="@null"
+             />
+        <Button
+            android:id="@+id/btn_order"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/icon_search"
+            android:text="搜索"
+            android:textSize="@dimen/sp12"
+            android:textColor="@color/bottom_text_colcor"
+            android:background="@null"
+            />
+        <Button
+            android:id="@+id/btn_shoppingCart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/icon_collect"
+            android:text="收藏"
+            android:textSize="@dimen/sp12"
+            android:textColor="@color/bottom_text_colcor"
+            android:background="@null"
+            />
+        <Button
+            android:id="@+id/btn_mine"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/icon_me"
+            android:text="我的"
+            android:textSize="@dimen/sp12"
+            android:textColor="@color/bottom_text_colcor"
+            android:background="@null"
+            />
+        </LinearLayout>
+
+</LinearLayout>

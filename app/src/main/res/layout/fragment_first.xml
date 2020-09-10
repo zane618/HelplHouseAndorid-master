@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title"></include>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/imgvone"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:adjustViewBounds="true"
+            android:maxWidth="1080px"
+            android:maxHeight="1080px"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_zidiv_bar" />
+
+        <ImageView
+            android:id="@+id/imgvtwo"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:adjustViewBounds="true"
+            android:maxWidth="1080px"
+            android:maxHeight="1080px"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_zidiv_bar" />
+
+        <ImageView
+            android:id="@+id/imgvthree"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:adjustViewBounds="true"
+            android:maxWidth="1080px"
+            android:maxHeight="1080px"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_zidiv_bar" />
+    </android.support.v4.view.ViewPager>
+    <!--  <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          android:background="@color/blue"
+          android:orientation="horizontal">
+
+      </LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp10"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgvsell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:gravity="center"
+            android:maxWidth="50dp"
+            android:maxHeight="50dp"
+            android:src="@drawable/icon_home_one" />
+
+        <ImageView
+            android:id="@+id/imgvrent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:gravity="center"
+            android:maxWidth="50dp"
+            android:maxHeight="50dp"
+            android:src="@drawable/icon_home_two" />
+
+        <ImageView
+            android:id="@+id/imgvnear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:gravity="center"
+            android:maxWidth="50dp"
+            android:maxHeight="50dp"
+            android:src="@drawable/icon_home_three" />
+
+        <ImageView
+            android:id="@+id/imgvbrowser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:gravity="center"
+            android:maxWidth="50dp"
+            android:maxHeight="50dp"
+            android:src="@drawable/icon_home_four" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtvsell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="出售房源"
+            android:textColor="@color/drakgray"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/txtvrent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="出租房源"
+            android:textColor="@color/drakgray"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/txtvnear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="附近房源"
+            android:textColor="@color/drakgray"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/txtvbrowser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="我的浏览"
+            android:textColor="@color/drakgray"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgvgo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:gravity="center"
+            android:maxWidth="50dp"
+            android:maxHeight="50dp"
+            android:src="@drawable/icon_home_five" />
+
+        <ImageView
+            android:id="@+id/imgvcalculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:gravity="center"
+            android:maxWidth="50dp"
+            android:maxHeight="50dp"
+            android:src="@drawable/icon_home_six" />
+
+        <ImageView
+            android:id="@+id/imgvmyhouse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:gravity="center"
+            android:maxWidth="50dp"
+            android:maxHeight="50dp"
+            android:src="@drawable/icon_home_seven" />
+
+        <ImageView
+            android:id="@+id/imgvmycustom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:gravity="center"
+            android:maxWidth="50dp"
+            android:maxHeight="50dp"
+            android:src="@drawable/icon_home_eight" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtvgo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="我的跟进"
+            android:textColor="@color/drakgray"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/txtvcalculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginRight="-14dp"
+            android:text="房贷计算器"
+            android:textColor="@color/drakgray"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/txtvmyhouse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/drakgray"
+            android:text="我的房源"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/txtvmycustomr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="我的客户"
+            android:textColor="@color/drakgray"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="52dp"
+            android:gravity="center"
+            android:layout_weight="0.25"
+            >
+            <ImageView
+                android:id="@+id/imgvhouseinput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:adjustViewBounds="true"
+                android:gravity="center"
+                android:maxWidth="50dp"
+                android:maxHeight="50dp"
+                android:src="@drawable/icon_home_nine" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="52dp"
+            android:gravity="center"
+            android:layout_weight="0.25"
+            >
+            <ImageView
+            android:id="@+id/imgvcustominput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:maxWidth="50dp"
+            android:maxHeight="50dp"
+            android:src="@drawable/icon_home_ten" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5">
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:layout_weight="0.25"
+            >
+            <TextView
+                android:id="@+id/txtvhouseinput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="房源登记"
+                android:textColor="@color/drakgray"
+                android:textSize="14dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:layout_weight="0.25"
+            >
+            <TextView
+                android:id="@+id/txtvcustominput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="客户登记"
+                android:textColor="@color/drakgray"
+                android:textSize="14dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5">
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+
+        android:orientation="horizontal">
+
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

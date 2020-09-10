@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_group"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/quyu"
+                android:textSize="@dimen/sp16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10">
+
+            <CheckBox
+                android:id="@+id/chk_luyang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="庐阳区"
+                android:textColor="@color/drakgray"
+                android:textSize="@dimen/sp12" />
+
+            <CheckBox
+                android:id="@+id/chk_shushan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="蜀山区"
+                android:textColor="@color/drakgray"
+                android:textSize="@dimen/sp12" />
+
+            <CheckBox
+                android:id="@+id/chk_jingkai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="经开区"
+                android:textColor="@color/drakgray"
+                android:textSize="@dimen/sp12" />
+
+            <CheckBox
+                android:id="@+id/chk_xinzhan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="新站区"
+                android:textColor="@color/drakgray"
+                android:textSize="@dimen/sp12" />
+
+            <CheckBox
+                android:id="@+id/chk_baohe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="包河区"
+                android:textColor="@color/drakgray"
+                android:textSize="@dimen/sp12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10">
+
+            <CheckBox
+                android:id="@+id/chk_gaoxin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="高新区"
+                android:textColor="@color/drakgray"
+                android:textSize="@dimen/sp12" />
+
+            <CheckBox
+                android:id="@+id/chk_zhengwu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="政务区"
+                android:textColor="@color/drakgray"
+                android:textSize="@dimen/sp12" />
+
+            <CheckBox
+                android:id="@+id/chk_yaohai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="瑶海区"
+                android:textColor="@color/drakgray"
+                android:textSize="@dimen/sp12" />
+
+            <CheckBox
+                android:id="@+id/chk_binhu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="滨湖区"
+                android:textColor="@color/drakgray"
+                android:textSize="@dimen/sp12" />
+
+            <CheckBox
+                android:id="@+id/chk_changfeng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="长丰县"
+                android:textColor="@color/drakgray"
+                android:textSize="@dimen/sp12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10">
+
+            <CheckBox
+                android:id="@+id/chk_feixi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="肥西县"
+                android:textColor="@color/drakgray"
+                android:textSize="@dimen/sp12" />
+
+            <CheckBox
+                android:id="@+id/chk_feidong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="肥东县"
+                android:textColor="@color/drakgray"
+                android:textSize="@dimen/sp12" />
+
+            <CheckBox
+                android:id="@+id/chk_lujiang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="庐江县"
+                android:textColor="@color/drakgray"
+                android:textSize="@dimen/sp12" />
+
+            <CheckBox
+                android:id="@+id/chk_chaohu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="巢湖市"
+                android:textColor="@color/drakgray"
+                android:textSize="@dimen/sp12" />
+
+            <CheckBox
+                android:id="@+id/chk_beicheng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="北城区"
+                android:textColor="@color/drakgray"
+                android:textSize="@dimen/sp12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10">
+
+            <CheckBox
+                android:id="@+id/chk_xinqiao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="新桥区"
+                android:textColor="@color/drakgray"
+                android:textSize="@dimen/sp12" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp10"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10">
+    <Switch
+        android:id="@+id/switchone"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp16"
+        android:text="  推送开关:" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/white">
+    <include layout="@layout/title" android:id="@+id/title"
+        ></include>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:layout_marginTop="31dp"
+        android:hint="请输入手机号或用户名"
+        android:paddingTop="@dimen/ten"
+        android:paddingBottom="@dimen/ten"
+        android:paddingLeft="@dimen/ten"
+        android:textSize="@dimen/sp13"
+        android:textColorHint="@color/gray"
+        android:background="@drawable/shape_et_login"
+        android:id="@+id/edt_phonenumber"
+        android:layout_below="@+id/title"
+        android:layout_alignLeft="@+id/edt_pwd"
+        android:layout_alignStart="@+id/edt_pwd" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_phonenumber"
+        android:layout_marginTop="@dimen/thirty"
+        android:hint="@string/enter_pwd"
+        android:paddingTop="@dimen/ten"
+        android:paddingBottom="@dimen/ten"
+        android:paddingLeft="@dimen/ten"
+        android:layout_marginLeft="@dimen/ten"
+        android:layout_marginRight="@dimen/ten"
+        android:textSize="@dimen/sp13"
+        android:textColorHint="@color/gray"
+        android:background="@drawable/shape_et_login"
+        android:inputType="textPassword"
+        android:id="@+id/edt_pwd" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/thirty"
+        android:layout_marginLeft="@dimen/thirty"
+        android:layout_marginRight="@dimen/thirty"
+        android:paddingTop="@dimen/ten"
+        android:paddingBottom="@dimen/ten"
+        android:layout_below="@id/edt_pwd"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_login"
+        android:textSize="@dimen/dp18"
+        android:text="@string/login"
+        android:id="@+id/btn_login"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/btn_login"
+        android:layout_below="@id/btn_login"
+        android:paddingTop="@dimen/ten"
+        android:paddingBottom="@dimen/ten"
+        android:text="@string/register"
+        android:textSize="@dimen/text_small"
+        android:textColor="@color/gray"
+        android:id="@+id/register"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/btn_login"
+        android:layout_below="@id/btn_login"
+        android:paddingTop="@dimen/ten"
+        android:paddingBottom="@dimen/ten"
+        android:text="@string/forget_pwd"
+        android:textSize="@dimen/text_small"
+        android:textColor="@color/gray"
+        android:id="@+id/forgetpwd"/>
+
+    <TextView
+        android:id="@+id/tv_u_001"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/register"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="@dimen/dp15"
+        android:gravity="center"
+        android:text="@string/about_us"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/sp15" />
+
+</RelativeLayout>

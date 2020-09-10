@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <include layout="@layout/title" android:id="@+id/title"
+        ></include>
+    <!-- 头像部分 -->
+    <RelativeLayout
+        android:id="@+id/rl_avatar_activityuserinfo"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/avatar"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp12" />
+
+        <ImageView
+            android:id="@+id/img_avatar_right"
+            android:layout_width="10dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:visibility="invisible"
+            android:src="@drawable/icon_com_right" />
+
+        <com.zidiv.realty.customview.RoundImageViewByXfermode
+            android:id="@+id/img_avatar_activityuserinfo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/img_avatar_right"
+            android:scaleType="fitCenter"
+            android:src="@drawable/avatar" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/navigationfont1" />
+
+    <!-- 昵称部分 -->
+    <RelativeLayout
+        android:id="@+id/rl_nickname_activityuserinfo"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="用户名"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp12" />
+
+        <ImageView
+            android:id="@+id/img_nickname_right"
+            android:layout_width="10dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:visibility="invisible"
+            android:src="@drawable/icon_com_right" />
+
+        <TextView
+            android:id="@+id/txt_nickname_activityuserinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:textSize="@dimen/sp12"
+            android:layout_toLeftOf="@id/img_nickname_right"
+            android:text="暂无昵称" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/navigationfont1" />
+
+    <!-- 手机号码部分 -->
+    <RelativeLayout
+        android:id="@+id/rl_phonenumber_activityuserinfo"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/phonenumber"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp12" />
+
+
+        <TextView
+            android:id="@+id/txt_phonenumber_activityuserinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:textSize="@dimen/sp12"
+            android:text="0" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/navigationfont1" />
+    <!-- 注册时间 -->
+    <RelativeLayout
+        android:id="@+id/rl_zhucetime"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="注册时间"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp12" />
+
+
+        <TextView
+            android:id="@+id/tv_zhucetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:textSize="@dimen/sp12"
+            android:text="0" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/navigationfont1" />
+    <!-- 到期时间 -->
+    <RelativeLayout
+        android:id="@+id/rl_daoqitime"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="到期时间"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp12" />
+
+
+        <TextView
+            android:id="@+id/tv_daoqitime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:textSize="@dimen/sp12"
+            android:text="0" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/navigationfont1" />
+
+
+    <!-- 修改密码部分 -->
+    <RelativeLayout
+        android:id="@+id/rl_changepwd_activityuserinfo"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:visibility="visible"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/changepwd"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp12" />
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_com_right" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:visibility="visible"
+        android:background="@color/navigationfont1" />
+</LinearLayout>

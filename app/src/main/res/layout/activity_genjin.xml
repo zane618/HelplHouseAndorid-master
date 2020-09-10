@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <include layout="@layout/title" android:id="@+id/title"
+        ></include>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp30"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp5"
+            android:textSize="@dimen/sp15"
+            android:text="跟进房源："/>
+        <TextView
+            android:id="@+id/tv_choose_way"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingTop="@dimen/dp5"
+            android:paddingBottom="@dimen/dp5"
+            android:gravity="left"
+            android:text="选择方式"
+            android:textSize="@dimen/sp15"
+            android:textColor="@color/gray"/>
+    </LinearLayout>
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="@dimen/dp10"
+        android:textSize="@dimen/sp14"
+        android:padding="@dimen/dp10"
+        android:gravity="left"
+        android:hint="跟进内容"
+        android:background="@drawable/edittext_shape"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/thirty"
+        android:layout_marginLeft="@dimen/thirty"
+        android:layout_marginRight="@dimen/thirty"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_login"
+        android:textSize="@dimen/sp13"
+        android:text="确  定"
+        android:id="@+id/btn_sure"/>
+</LinearLayout>

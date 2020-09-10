@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--整个界面背景颜色-->
+    <color name="background_all">#F0F0F0</color>
+    <!--标题栏背景颜色-->
+    <color name="title_all">#2881c5</color>
+    <!--同上，浅的-->
+    <color name="title_all_low">#71B896</color>
+    <!--EditText边框颜色-->
+    <color name="frame">#D2D2D2</color>
+    <!--白色-->
+    <color name="white">#ffffff</color>
+    <!--黑色-->
+    <color name="black">#000000</color>
+    <!--注册等小字颜色-->
+    <color name="gray">#727272</color>
+    <!--注册等小字颜色-->
+    <color name="drakgray">#494949</color>
+    <!--获取验证码按钮背景颜色-->
+    <color name="blue">#3090E6</color>
+    <!--同上，浅的-->
+    <color name="blue_low">#3090B4</color>
+    <!--最下面的颜色-->
+    <color name="bottom_color">#FAFAFA</color>
+    <!--最下面的字体颜色-->
+    <color name="bottom_text_colcor">#C3C3C3</color>
+    <color name="bottom_text_colcor2">#2780c4</color>
+    <!--圆形头像那部分的背景色-->
+    <color name="bg_for_head">#3090E6</color>
+    <!--我的文字颜色-->
+    <color name="txt">#333333</color>
+    <!--线条颜色-->
+    <color name="navigationfont1">#776e6d6d</color>
+    <color name="payfail">#f96e5c</color>
+    <!--头像修改-->
+    <color name="statusbar_bg">#09A7F0</color>
+    <color name="light_gray">#E0E0E1</color>
+    <color name="Semi_transparent">#50000000</color>
+    <color name="statusvar_0">#00000000</color>
+    <color name="orange">#ffa826</color>
+    <color name="adapter_gb">#D7ECFA</color>
+</resources>

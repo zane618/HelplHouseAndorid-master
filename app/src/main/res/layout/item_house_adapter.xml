@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp5">
+
+        <TextView
+            android:id="@+id/housename"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="名字"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:id="@+id/fanghao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="名字"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/sp14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp5">
+
+        <TextView
+            android:id="@+id/houseZone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="区"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/mianji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:text="面积"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/houseSoujia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp5"
+            android:text="售价"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/huxing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp5"
+            android:text="三室"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/ceng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp5"
+            android:text="18/20层"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="2000-01-01"
+            android:textColor="@color/gray" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#E8E8E8" />
+</LinearLayout>

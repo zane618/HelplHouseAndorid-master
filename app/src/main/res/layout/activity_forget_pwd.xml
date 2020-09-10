@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background_all">
+    <include layout="@layout/title" android:id="@+id/title"></include>
+
+    <EditText
+        android:id="@+id/txt_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginLeft="@dimen/ten"
+        android:layout_marginRight="@dimen/ten"
+        android:layout_marginTop="@dimen/dp30"
+        android:background="@drawable/edittext_shape"
+        android:hint="@string/enter_phone"
+        android:inputType="number"
+        android:paddingBottom="@dimen/ten"
+        android:paddingLeft="@dimen/ten"
+        android:paddingTop="@dimen/ten"
+        android:textColorHint="@color/gray"
+        android:textSize="@dimen/sp13" />
+    <LinearLayout
+        android:id="@+id/lineone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:orientation="horizontal"
+        android:layout_below="@id/txt_phone"
+        >
+
+        <EditText
+            android:id="@+id/txt_keycode"
+            android:layout_width="227dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginRight="@dimen/ten"
+            android:background="@drawable/shape_et_login"
+            android:hint="短信验证码"
+            android:paddingLeft="@dimen/ten"
+            android:paddingTop="@dimen/ten"
+            android:paddingBottom="@dimen/ten"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/sp13" />
+
+        <Button
+            android:id="@+id/btn_keycode"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:background="@color/bg_for_head"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp16"
+            android:layout_marginRight="@dimen/ten"
+            android:text="获取验证码" />
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/thirty"
+        android:layout_marginLeft="@dimen/thirty"
+        android:layout_marginRight="@dimen/thirty"
+        android:paddingTop="@dimen/ten"
+        android:paddingBottom="@dimen/ten"
+        android:layout_below="@id/lineone"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_login"
+        android:textSize="@dimen/dp18"
+        android:text="@string/next"
+        android:id="@+id/btn_next"/>
+</RelativeLayout>

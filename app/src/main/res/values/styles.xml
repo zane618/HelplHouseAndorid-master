@@ -1,0 +1,17 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!--头像dialog-->
+    <style name="text_19_black">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="first_page_text_other">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/first_text_color</item>
+    </style>
+</resources>
