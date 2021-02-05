@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">帮你忙</string>
+    <string name="app_name">帮你忙房源</string>
     <!--登录页面-->
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
