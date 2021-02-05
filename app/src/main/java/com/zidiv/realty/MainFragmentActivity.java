@@ -87,16 +87,16 @@ public class MainFragmentActivity extends FragmentActivity implements View.OnCli
         }
         setContentView(R.layout.activity_fragent_main);
         //获取sdcard权限
-
-        try {
+        init();
+        /*try {
             int permission = ActivityCompat.checkSelfPermission(this,
                     "android.permission.WRITE_EXTERNAL_STORAGE");
             if (permission != PackageManager.PERMISSION_GRANTED) {
                 ActivityCompat.requestPermissions(this, PERMISSIONS_STORAGE, 0x77);
             } else {
-                init();
+//                init();
             }
-        } catch (Exception e){}
+        } catch (Exception e){}*/
     }
 
     @Override
@@ -105,12 +105,13 @@ public class MainFragmentActivity extends FragmentActivity implements View.OnCli
             case 0x77:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     // Permission Granted 授予权限
-                    init();
+//                    init();
                 } else {
+//                    init();
                     // Permission Denied 权限被拒绝
-                    Toast.makeText(MainFragmentActivity.this, "Permission Denied",
-                            Toast.LENGTH_SHORT).show();
-                    finish();
+//                    Toast.makeText(MainFragmentActivity.this, "Permission Denied",
+//                            Toast.LENGTH_SHORT).show();
+//                    finish();
                 }
                 break;
         }

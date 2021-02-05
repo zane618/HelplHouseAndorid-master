@@ -3,11 +3,9 @@ package com.zidiv.realty.fragment;
 import android.Manifest;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -16,8 +14,8 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -38,7 +36,6 @@ import com.zidiv.realty.MainFragmentActivity;
 import com.zidiv.realty.R;
 import com.zidiv.realty.activity.AboutActivity;
 import com.zidiv.realty.activity.AdDetailActivity;
-import com.zidiv.realty.activity.LoginActivity;
 import com.zidiv.realty.activity.PushActivity;
 import com.zidiv.realty.activity.RechargeActivity;
 import com.zidiv.realty.activity.TrueAuthorActivity;
@@ -65,14 +62,13 @@ import java.util.List;
 
 import me.nereo.multi_image_selector.MultiImageSelectorActivity;
 
-import static android.app.Activity.RESULT_FIRST_USER;
 import static android.app.Activity.RESULT_OK;
 
 /**
  * Created by Administrator on 2016/3/17.
  */
 public class MineFragment extends BaseFragment implements View.OnClickListener {
-    private Context context;
+    private FragmentActivity context;
     private ImageView img_avatar; //头像
     private TextView tv_nickname, tv_phonenum, tv_date, tv_auth; //昵称和手机号
     private RelativeLayout my_info;//个人资料
@@ -233,47 +229,17 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
                 alertDialog.dismiss();
                 break;
             case R.id.head_custom_ima:
-                if (!checkPermissionGranted(Manifest.permission.READ_EXTERNAL_STORAGE)) {
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                        requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
-                    }
-                }
+//                if (!checkPermissionGranted(Manifest.permission.READ_EXTERNAL_STORAGE)) {
+//                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//                        requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
+//                    }
+//                }
 //                if (!checkPermissionGranted(Manifest.permission.CAMERA)) {
 //                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 //                        requestPermissions(new String[]{Manifest.permission.CAMERA}, 1);
 //                    }
 //                }
-                AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                View vUpload = getLayoutInflater().from(context).inflate(R.layout.upload_user_pic, null);
-                TextView photograph = (TextView) vUpload.findViewById(R.id.Photograph);
-                TextView selectPic = (TextView) vUpload.findViewById(R.id.selectImage_from_local);
-                TextView dimissDialoag = (TextView) vUpload.findViewById(R.id.dimiss_dialoag);
-                TextView txttrueauthor=(TextView)vUpload.findViewById(R.id.txt_true_author);
-                builder.setView(vUpload);
-                alertDialog = builder.show();
-                //  MyDialogListener myDialogListener = new MyDialogListener(alertDialog);
-                photograph.setOnClickListener(this);
-                selectPic.setOnClickListener(this);
-
-                dimissDialoag.setOnClickListener(this);
-                //是否实名认证
-                String strPass = MApplication.getMApplication().getUserPass();
-                switch (strPass) {
-                    case "3":
-                        txttrueauthor.setText("待审核");
-                        txttrueauthor.setVisibility(View.VISIBLE);
-                        break;
-                    case "4":
-                        break;
-                    case "5":
-                        txttrueauthor.setVisibility(View.VISIBLE);
-                        txttrueauthor.setOnClickListener(this);
-                        break;
-                    default:
-                        txttrueauthor.setVisibility(View.VISIBLE);
-                        txttrueauthor.setOnClickListener(this);
-                        break;
-                }
+                dialogShow();
 
                 break;
             case R.id.Photograph: //拍照
@@ -322,6 +288,40 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
                 break;
         }
 
+    }
+
+    private void dialogShow() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        View vUpload = getLayoutInflater().from(context).inflate(R.layout.upload_user_pic, null);
+        TextView photograph = (TextView) vUpload.findViewById(R.id.Photograph);
+        TextView selectPic = (TextView) vUpload.findViewById(R.id.selectImage_from_local);
+        TextView dimissDialoag = (TextView) vUpload.findViewById(R.id.dimiss_dialoag);
+        TextView txttrueauthor=(TextView)vUpload.findViewById(R.id.txt_true_author);
+        builder.setView(vUpload);
+        alertDialog = builder.show();
+        //  MyDialogListener myDialogListener = new MyDialogListener(alertDialog);
+        photograph.setOnClickListener(this);
+        selectPic.setOnClickListener(this);
+
+        dimissDialoag.setOnClickListener(this);
+        //是否实名认证
+        String strPass = MApplication.getMApplication().getUserPass();
+        switch (strPass) {
+            case "3":
+                txttrueauthor.setText("待审核");
+                txttrueauthor.setVisibility(View.VISIBLE);
+                break;
+            case "4":
+                break;
+            case "5":
+                txttrueauthor.setVisibility(View.VISIBLE);
+                txttrueauthor.setOnClickListener(this);
+                break;
+            default:
+                txttrueauthor.setVisibility(View.VISIBLE);
+                txttrueauthor.setOnClickListener(this);
+                break;
+        }
     }
 
 
