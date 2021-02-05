@@ -202,6 +202,7 @@
             android:id="@+id/imgvmyhouse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
@@ -213,6 +214,7 @@
 
         <ImageView
             android:id="@+id/imgvmycustom"
+            android:visibility="invisible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -260,6 +262,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textColor="@color/drakgray"
+            android:visibility="invisible"
             android:text="我的房源"
             android:textSize="14dp" />
 
@@ -267,6 +270,7 @@
             android:id="@+id/txtvmycustomr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             android:layout_weight="1"
             android:gravity="center"
             android:text="我的客户"
@@ -290,6 +294,7 @@
             >
             <ImageView
                 android:id="@+id/imgvhouseinput"
+                android:visibility="invisible"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -311,6 +316,7 @@
             >
             <ImageView
             android:id="@+id/imgvcustominput"
+                android:visibility="invisible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -346,6 +352,7 @@
             >
             <TextView
                 android:id="@+id/txtvhouseinput"
+                android:visibility="invisible"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -365,6 +372,7 @@
             >
             <TextView
                 android:id="@+id/txtvcustominput"
+                android:visibility="invisible"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

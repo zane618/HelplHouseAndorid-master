@@ -151,13 +151,13 @@ public class FirstFragment extends BaseFragment implements View.OnClickListener 
         imgv_calculate.setOnClickListener(this);
 
         imgv_myhouse = (ImageView) view.findViewById(R.id.imgvmyhouse);
-        imgv_myhouse.setOnClickListener(this);
+//        imgv_myhouse.setOnClickListener(this);
         imgv_mycustom = (ImageView) view.findViewById(R.id.imgvmycustom);
-        imgv_mycustom.setOnClickListener(this);
+//        imgv_mycustom.setOnClickListener(this);
         imgv_house_input = (ImageView) view.findViewById(R.id.imgvhouseinput);
-        imgv_house_input.setOnClickListener(this);
+//        imgv_house_input.setOnClickListener(this);
         imgv_custom_input = (ImageView) view.findViewById(R.id.imgvcustominput);
-        imgv_custom_input.setOnClickListener(this);
+//        imgv_custom_input.setOnClickListener(this);
 
         return view;
     }
