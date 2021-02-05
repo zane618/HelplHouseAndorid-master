@@ -239,6 +239,9 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
 //                        requestPermissions(new String[]{Manifest.permission.CAMERA}, 1);
 //                    }
 //                }
+                if ("19966175125".equals(MApplication.getMApplication().getPhoto())) {
+                    return;
+                }
                 dialogShow();
 
                 break;

@@ -2,6 +2,7 @@ package com.zidiv.realty.activity;
 
 import android.Manifest;
 import android.app.AlertDialog;
+import android.app.Application;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -148,6 +149,9 @@ public class UserInfoActivity extends BaseActivity{
 
     @Override
     public void initLinstener() {
+        if ("19966175125".equals(MApplication.getMApplication().getPhoto())) {
+            return;
+        }
         //修改头像
         rl_avatar_activityuserinfo.setOnClickListener(new View.OnClickListener() {
             @Override
