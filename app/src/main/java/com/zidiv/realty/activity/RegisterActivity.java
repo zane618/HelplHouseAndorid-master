@@ -8,6 +8,7 @@ import android.text.Html;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -38,6 +39,7 @@ public class RegisterActivity extends BaseActivity {
     private ImageView iv_back;
     private EditText txt_name, txt_phone, txt_pwd, txt_keycode;
     private Button btn_register, btn_keycode;
+    private CheckBox checkBox;
 
     private int second = 60;
     Timer timer;
@@ -69,11 +71,16 @@ public class RegisterActivity extends BaseActivity {
         btn_keycode = (Button) findViewById(R.id.btn_keycode);
         //注册
         btn_register = (Button) findViewById(R.id.btn_register);
+        checkBox = findViewById(R.id.chk_agree);
 
         //注册
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (!checkBox.isChecked()) {
+                    T.showShort(context, "请您先阅读用户服务协议并同意协议内容");
+                    return;
+                }
                 if (TextUtils.isEmpty(txt_phone.getText().toString().trim())) {
                     T.showShort(context, "手机号码不能为空");
                     return;
