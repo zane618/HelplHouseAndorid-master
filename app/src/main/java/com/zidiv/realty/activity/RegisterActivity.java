@@ -93,14 +93,17 @@ public class RegisterActivity extends BaseActivity {
                     T.showShort(context, "请输入密码");
                     return;
                 }
-                if (TextUtils.isEmpty(txt_name.getText().toString().trim())) {
-                    T.showShort(context, "请输入真实姓名");
+                String realName = txt_name.getText().toString().trim();
+                if (TextUtils.isEmpty(realName)|| (!checkname(realName)) || (realName.length() > 4 || realName.length() < 2)) {
+                    T.showShort(context, "请输入2到4位中文姓名");
+                    return;
                 }
+
 
                 //保存注册信息
                 String url = HttpUrls.REGISTER_URL;
                 RequestParams params = new RequestParams();
-                params.addBodyParameter("name", txt_name.getText().toString().trim());
+                params.addBodyParameter("name", realName);
                 params.addBodyParameter("loginpwd", txt_pwd.getText().toString().trim());
                 params.addBodyParameter("key", txt_keycode.getText().toString().trim());
                 params.addBodyParameter("phone", txt_phone.getText().toString().trim());
@@ -249,5 +252,22 @@ public class RegisterActivity extends BaseActivity {
             }
         });
 
+    }
+
+    /**
+     * 判断是否为汉字
+     * @param name
+     * @return
+     */
+    private boolean checkname(String name)
+    {
+        int n = 0;
+        for(int i = 0; i < name.length(); i++) {
+            n = (int)name.charAt(i);
+            if(!(19968 <= n && n <40869)) {
+                return false;
+            }
+        }
+        return true;
     }
 }
