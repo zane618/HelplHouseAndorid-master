@@ -241,8 +241,10 @@ public class RegisterActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Intent intentone = new Intent(context, AdDetailActivity.class);
-                intentone.putExtra("title", "用户服务协议");
-                intentone.putExtra("src", "http://www.80mf.com/admin/notlogin.htm");
+//                intentone.putExtra("title", "用户服务协议");
+//                intentone.putExtra("src", "http://www.80mf.com/admin/notlogin.htm");
+                intentone.putExtra("title", "隐私政策");
+                intentone.putExtra("src", "http://www.80mf.com/admin/snotlogin.htm");
                 startActivity(intentone);
             }
         });

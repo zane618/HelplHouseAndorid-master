@@ -108,7 +108,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="49dp"
         android:layout_marginBottom="6dp"
-        android:text="我已阅读,并同意《用户服务协议》" />
+        android:text="我已阅读,并同意《隐私政策》" />
     <Button
         android:id="@+id/btn_register"
         android:layout_width="match_parent"
