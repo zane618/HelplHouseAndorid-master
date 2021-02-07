@@ -237,7 +237,7 @@ public class RegisterActivity extends BaseActivity {
     @Override
     public void initData() {
         ((TextView) findViewById(R.id.title_text)).setText("注册");
-        String str_Temp = "我已阅读,并同意<font color='#09A7F0'>《用户服务协议》</font>";
+        String str_Temp = "我已阅读,并同意<font color='#09A7F0'>《隐私政策》</font>";
         TextView tv_protocol = (TextView) findViewById(R.id.tv_protocol);
         tv_protocol.setText(Html.fromHtml(str_Temp));
         tv_protocol.setOnClickListener(new View.OnClickListener() {
