@@ -149,26 +149,6 @@ public class UserInfoActivity extends BaseActivity{
 
     @Override
     public void initLinstener() {
-        if ("19966175125".equals(MApplication.getMApplication().getPhoto())) {
-            return;
-        }
-        //修改头像
-        rl_avatar_activityuserinfo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                View view = getLayoutInflater().from(context).inflate(R.layout.upload_user_pic,null);
-                TextView photograph = (TextView) view.findViewById(R.id.Photograph);
-                TextView selectPic = (TextView) view.findViewById(R.id.selectImage_from_local);
-                TextView dimissDialoag = (TextView) view.findViewById(R.id.dimiss_dialoag);
-                builder.setView(view);
-                AlertDialog alertDialog = builder.show();
-                MyDialogListener myDialogListener = new MyDialogListener(alertDialog);
-                photograph.setOnClickListener(myDialogListener);
-                selectPic.setOnClickListener(myDialogListener);
-                dimissDialoag.setOnClickListener(myDialogListener);
-            }
-        });
         //修改昵称
         rl_nickname_activityuserinfo.setOnClickListener(new View.OnClickListener() { //昵称跳
             @Override
@@ -189,6 +169,26 @@ public class UserInfoActivity extends BaseActivity{
             @Override
             public void onClick(View v) {
                 toBack();
+            }
+        });
+        if ("19966175125".equals(MApplication.getMApplication().getPhoto())) {
+            return;
+        }
+        //修改头像
+        rl_avatar_activityuserinfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                View view = getLayoutInflater().from(context).inflate(R.layout.upload_user_pic,null);
+                TextView photograph = (TextView) view.findViewById(R.id.Photograph);
+                TextView selectPic = (TextView) view.findViewById(R.id.selectImage_from_local);
+                TextView dimissDialoag = (TextView) view.findViewById(R.id.dimiss_dialoag);
+                builder.setView(view);
+                AlertDialog alertDialog = builder.show();
+                MyDialogListener myDialogListener = new MyDialogListener(alertDialog);
+                photograph.setOnClickListener(myDialogListener);
+                selectPic.setOnClickListener(myDialogListener);
+                dimissDialoag.setOnClickListener(myDialogListener);
             }
         });
     }
