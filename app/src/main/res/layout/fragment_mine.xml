@@ -251,6 +251,46 @@
                 android:layout_width="match_parent"
                 android:layout_height="1px"
                 android:background="@color/background_all" />
+            <!-- 隐私政策 -->
+            <RelativeLayout
+                android:id="@+id/my_yszc"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/img_yszc"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_zidiv_lfive" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/img_yszc"
+                    android:text="隐私政策"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/sp14" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_com_right" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/background_all" />
             <!-- 充值续费 -->
             <RelativeLayout
                 android:id="@+id/my_price"

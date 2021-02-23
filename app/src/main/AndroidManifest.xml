@@ -34,18 +34,14 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <!-- 允许应用程序更改主屏幕中的设置和快捷方式 -->
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="android.permission.SEND_SMS" />
     <!-- 允许应用程序写入(不能读取)用户的通讯录数据 -->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.READ_SMS" />
     <!-- 允许程序获取当前或最近运行的应用 -->
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <!-- 允许应用程序修改全局声音设置的权限 -->
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
-    <!-- 录音 -->
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <!-- 控制振动器 -->
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />

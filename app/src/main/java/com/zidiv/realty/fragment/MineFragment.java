@@ -78,6 +78,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
     private RelativeLayout my_calculate;//房贷计算器
     private RelativeLayout my_push;//推送
     private RelativeLayout my_price;//充值
+    private RelativeLayout my_yszc;//隐私政策
     private AlertDialog alertDialog;
     private final int REQUEST_IMAGE = 2;
     private ArrayList<String> mSelectPath;
@@ -141,7 +142,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
         my_price = (RelativeLayout) view.findViewById(R.id.my_price);
         my_push = (RelativeLayout) view.findViewById(R.id.my_push);
         my_loginout = (RelativeLayout) view.findViewById(R.id.my_loginout);
-
+        my_yszc = view.findViewById(R.id.my_yszc);
         //点击事件
         my_info.setOnClickListener(this);
         my_collect.setOnClickListener(this);
@@ -151,6 +152,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
         my_push.setOnClickListener(this);
         my_loginout.setOnClickListener(this);
         img_avatar.setOnClickListener(this);
+        my_yszc.setOnClickListener(this);
     }
 
 
@@ -285,6 +287,14 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
                 break;
             case R.id.dimiss_dialoag:
                 alertDialog.dismiss();
+                break;
+            case R.id.my_yszc:
+                Intent intentone = new Intent(context, AdDetailActivity.class);
+//                intentone.putExtra("title", "用户服务协议");
+//                intentone.putExtra("src", "http://www.80mf.com/admin/notlogin.htm");
+                intentone.putExtra("title", "隐私政策");
+                intentone.putExtra("src", "http://www.80mf.com/admin/snotlogin.htm");
+                startActivity(intentone);
                 break;
             default:
                 System.out.print("NO-imageView");
