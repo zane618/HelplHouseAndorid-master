@@ -9,6 +9,7 @@ import android.os.Build;
 import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.telephony.TelephonyManager;
+import android.text.Html;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -51,6 +52,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     private ImageView img_Back;
     private EditText edt_Phone, edt_Pwd;
     private TextView tv_Register, tv_ForgetPwd;
+    private CheckBox checkBox;
     private Button btn_Login;
     private Context context;
     private String sign;
@@ -82,6 +84,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         tv_Register = (TextView) findViewById(R.id.register);
         //忘记密码
         tv_ForgetPwd = (TextView) findViewById(R.id.forgetpwd);
+        checkBox = findViewById(R.id.chk_agree);
     }
 
     @Override
@@ -97,6 +100,20 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     @Override
     public void initData() {
         tv_title.setText("登录");
+        String str_Temp = "我已阅读,并同意<font color='#09A7F0'>《隐私政策》</font>";
+        TextView tv_protocol = (TextView) findViewById(R.id.tv_protocol);
+        tv_protocol.setText(Html.fromHtml(str_Temp));
+        tv_protocol.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentone = new Intent(context, AdDetailActivity.class);
+//                intentone.putExtra("title", "用户服务协议");
+//                intentone.putExtra("src", "http://www.80mf.com/admin/notlogin.htm");
+                intentone.putExtra("title", "隐私政策");
+                intentone.putExtra("src", "http://www.80mf.com/admin/snotlogin.htm");
+                startActivity(intentone);
+            }
+        });
         try {
             if (!checkPermissionGranted(Manifest.permission.READ_PHONE_STATE)) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -144,6 +161,10 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
     //登录
     private void login() {
+        if (!checkBox.isChecked()) {
+            T.showShort(context, "请您先阅读用户服务协议并同意协议内容");
+            return;
+        }
         if (TextUtils.isEmpty(edt_Phone.getText().toString().trim()) || TextUtils.isEmpty(edt_Pwd.getText().toString().trim())) {
             T.showShort(context, "用户名或密码不能为空");
             return;

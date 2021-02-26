@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 
 import com.zidiv.realty.application.MApplication;
+import com.zidiv.realty.dialog.AgreementDialog;
 import com.zidiv.realty.util.SPUtils;
 import com.zidiv.realty.util.T;
 
@@ -30,6 +31,38 @@ public class MainActivity extends InstrumentedActivity {
 
         setContentView(R.layout.activity_main);
         context = this;
+
+        boolean isFirstIntoApp = MApplication.getMApplication().isFisrtIntoApp();
+        if (isFirstIntoApp) {
+            //show dialog
+            new AgreementDialog(context).setListener(new AgreementDialog.IListener() {
+                @Override
+                public void onOk() {
+                    Intent in = new Intent();
+                    //判断是否已经登录
+                    in.setClass(context,MainFragmentActivity.class);
+                    startActivity(in);
+                    finish();
+                }
+
+                @Override
+                public void onCancel() {
+                    finish();
+                }
+            }).show();
+        } else {
+            goMainFragmentActivity();
+        }
+
+
+
+        JPushInterface.setDebugMode(true); 	// 设置开启日志,发布时请关闭日志
+        JPushInterface.init(this);     		// 初始化
+
+        String rid = JPushInterface.getRegistrationID(getApplicationContext());
+    }
+
+    private void goMainFragmentActivity() {
         Timer timer = new Timer();
         TimerTask tt = new TimerTask() {
             @Override
@@ -42,11 +75,6 @@ public class MainActivity extends InstrumentedActivity {
             }
         };
         timer.schedule(tt,1300);
-
-        JPushInterface.setDebugMode(true); 	// 设置开启日志,发布时请关闭日志
-        JPushInterface.init(this);     		// 初始化
-
-        String rid = JPushInterface.getRegistrationID(getApplicationContext());
     }
 
     @Override

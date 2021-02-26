@@ -96,6 +96,12 @@ public class MApplication extends Application {
         }
     }
 
+    /**
+     * 是否首次打开app
+     */
+    public boolean isFisrtIntoApp() {
+        return (boolean) SPUtils.get("APP", mApplication, "firstInto", true);
+    }
 
     //登录请求时间
     public long getSendTime() {

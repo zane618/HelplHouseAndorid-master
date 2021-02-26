@@ -36,15 +36,41 @@
         android:background="@drawable/shape_et_login"
         android:inputType="textPassword"
         android:id="@+id/edt_pwd" />
+    <RelativeLayout
+        android:id="@+id/ll_yszc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_pwd">
+        <CheckBox
+            android:id="@+id/chk_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lineone"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="15dp"
+            android:checked="false"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/chk_agree"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="49dp"
+            android:layout_marginBottom="6dp"
+            android:text="我已阅读,并同意《隐私政策》" />
+    </RelativeLayout>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/thirty"
+        android:layout_marginTop="@dimen/fifteen"
         android:layout_marginLeft="@dimen/thirty"
         android:layout_marginRight="@dimen/thirty"
         android:paddingTop="@dimen/ten"
         android:paddingBottom="@dimen/ten"
-        android:layout_below="@id/edt_pwd"
+        android:layout_below="@id/ll_yszc"
         android:textColor="@color/white"
         android:background="@drawable/btn_login"
         android:textSize="@dimen/dp18"
